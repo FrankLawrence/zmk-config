@@ -48,14 +48,14 @@
                 &kp TAB       &kp Q &kp W &kp E    &kp R            &kp T      &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSPC
                 &mt LCTRL ESC &kp A &kp S &kp D    &kp F            &kp G      &kp H     &kp J     &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT     &kp Z &kp X &kp C    &kp V            &kp B      &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                                          &kp LGUI &mo_sl LOWE FUNC &kp ENT    &kp SPACE &mo RAISE &kp RALT
+                                          &kp LGUI &mo_sl LOWER FUNC &kp ENT    &kp SPACE &mo RAISE &kp RALT
             >;
         };
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // | CT+SF+TAB |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | DEL  |
-            // | CTRL/ESC  |  6  |  7  |  8  |  9  |  0  |    | LFT | DWN |  UP | RGT |     |      |
-            // | CAPS      |     |     |     |     |     |    |     |     |     |     |     |      |
+            // | CT+SF+TAB |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | DEL |
+            // | CTRL/ESC  |  6  |  7  |  8  |  9  |  0  |    | LFT | DWN |  UP | RGT |     |     |
+            // | CAPS      |     |     |     |     |     |    |     |     |     |     |     |     |
             //                         |     |     |     |    |     |     |     |
             bindings = <
                 &kp LC(LS(TAB)) &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
@@ -117,7 +117,7 @@
                 &kp TAB    &kp Q &kp W &kp E   &kp R            &kp T      &none &none &none &none &none &none
                 &kp ESC    &kp A &kp S &kp D   &kp F            &kp G      &none &none &none &none &none &none
                 &kp LSHFT  &kp Z &kp X &kp C   &kp V            &kp B      &none &none &none &none &none &none
-                                       &kp ENT &mo_sl LOWE FUNC &kp SPACE  &none &none &none
+                                       &kp ENT &mo_sl LOWER FUNC &kp SPACE  &none &none &none
             >;
         };
     };
