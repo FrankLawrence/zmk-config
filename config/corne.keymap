@@ -101,23 +101,9 @@
             //                    |     |     |     |    |     |     |     |
             bindings = <
                 &none &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &none &none     &none &none &none &none
-                &none &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &none &tog GAME &none &none &none &none
+                &none &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &none &none     &none &none &none &none
                 &none &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &none &none     &none &none &none &none
                                       &none   &none   &none      &none &none     &none
-            >;
-        };
-
-        game_layer {
-            // -----------------------------------------------------------------------------------------
-            // | TAB   |  Q  |  W  |  E  |    R     |  T  |    |     |     |     |     |     |     |
-            // | ESC   |  A  |  S  |  D  |    F     |  G  |    |     |     |     |     |     |     |
-            // | SHFT  |  Z  |  X  |  C  |    V     |  B  |    |     |     |     |     |     |     |
-            //                     | ENT | LWR/FUNC | SPC |    |     |     |     |
-            bindings = <
-                &kp TAB    &kp Q &kp W &kp E   &kp R            &kp T      &none &none &none &none &none &none
-                &kp ESC    &kp A &kp S &kp D   &kp F            &kp G      &none &none &none &none &none &none
-                &kp LSHFT  &kp Z &kp X &kp C   &kp V            &kp B      &none &none &none &none &none &none
-                                       &kp ENT &mo_sl LOWER FUNC &kp SPACE  &none &none &none
             >;
         };
     };
