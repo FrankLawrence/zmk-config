@@ -53,15 +53,15 @@
         };
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // |      | ZEN | SIG | KIT | FIN | CAL |   | LFT | DWN |  UP | RGT |     |      |
-            // | CAPS |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | ENT |   | SPC |     | ALT |
+            // | CT+SF+TAB |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | DEL |
+            // | CTRL/ESC  |  6  |  7  |  8  |  9  |  0  |    | LFT | DWN |  UP | RGT |     |     |
+            // | CAPS      |     |     |     |     |     |    |     |     |     |     |     |     |
+            //                         |     |     |     |    |     |     |     |
             bindings = <
-                &kp LC(LS(TAB))&kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6     &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                &trans         &kp LC(LA(Z))&kp LC(LA(S))&kp LC(LA(L))&kp LC(LA(F))&kp LC(LA(C))  &kp LEFT   &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &kp CAPS       &trans       &trans       &trans       &trans       &trans         &trans     &trans   &trans &trans    &trans &trans
-                &kp LGUI &trans &kp RET                              &kp SPACE  &trans   &kp RALT
+                &kp LC(LS(TAB)) &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
+                &none           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &kp LEFT &kp DOWN &kp UP &kp RIGHT &none  &none
+                &kp CAPS        &none  &none  &none  &none  &none     &none    &none    &none  &none     &none  &none
+                                              &none  &none  &none     &none    &none    &none
             >;
         };
 
