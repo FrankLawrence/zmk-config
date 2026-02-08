@@ -36,6 +36,20 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&sl>;
         };
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+            locking;
+        };
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+            locking;
+        };
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -75,19 +89,19 @@
                                            &kp LGUI    &mo_sl LOWER FUNC &kp RET      &kp SPACE &mo RAISE &kp RALT
             >;
         };
-        /* game_layer { */
-        /*     // ----------------------------------------------------------------------------------------- */
-        /*     // | TAB   |  Q  |  W  |  E  |    R     |  T  |    |     |     |     |     |     |     | */
-        /*     // | ESC   |  A  |  S  |  D  |    F     |  G  |    |     |     |     |     |     |     | */
-        /*     // | SHFT  |  Z  |  X  |  C  |    V     |  B  |    |     |     |     |     |     |     | */
-        /*     //                     | ENT | LWR/FUNC | SPC |    |     |     |     | */
-        /*     bindings = < */
-        /*         &kp TAB    &kp Q &kp W &kp E   &kp R            &kp T      &none &none &none &none &none &none */
-        /*         &kp ESC    &kp A &kp S &kp D   &kp F            &kp G      &none &none &none &none &none &none */
-        /*         &kp LSHFT  &kp Z &kp X &kp C   &kp V            &kp B      &none &none &none &none &none &none */
-        /*                                &kp ENT &mo LOWER &kp SPACE  &none &none &none */
-        /*     >; */
-        /* }; */
+        game_layer {
+            // -----------------------------------------------------------------------------------------
+            // | TAB   |  Q  |  W  |  E  |    R     |  T  |    |     |     |     |     |     |     |
+            // | ESC   |  A  |  S  |  D  |    F     |  G  |    |     |     |     |     |     |     |
+            // | SHFT  |  Z  |  X  |  C  |    V     |  B  |    |     |     |     |     |     |     |
+            //                     | ENT | LWR/FUNC | SPC |    |     |     |     |
+            bindings = <
+                &kp TAB    &kp Q &kp W &kp E        &kp R     &kp T      &none &none &none &none &none &none
+                &kp ESC    &kp A &kp S &kp D        &kp F     &kp G      &none &none &none &none &none &none
+                &kp LSHFT  &kp Z &kp X &kp C        &kp V     &kp B      &none &none &none &none &none &none
+                                       &mt FUNC ENT &mo LOWER &kp SPACE  &none &none &none
+            >;
+        };
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // | CT+SF+TAB |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  | DEL |
@@ -137,10 +151,10 @@
             // |      | F11 | F12 | F13 | F14 | F15 |    |     |     |     |     |     |     |
             //                    |     |     |     |    |     |     |     |
             bindings = <
-                &none &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &none &none     &none &none &none &none
-                &none &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &none &none     &none &none &none &none
-                &none &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &none &none     &none &none &none &none
-                                      &none   &none   &none      &none &none     &none
+                &none &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &none &none         &none &none &none &none
+                &none &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &none &tog_on GAME  &none &none &none &none
+                &none &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &none &tog_off GAME &none &none &none &none
+                                      &none   &none   &none      &none &none         &none
             >;
         };
     };
